@@ -1,24 +1,30 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import foods from './foods';
+import {choice, remove} from './helpers';
+
+
+// import { add, multiply } from './helpers';
+// import data, { meow } from './cats'
 
 function App() {
+    console.log(`Fruits left: ${foods.length}.`)
+    const chosenFood = remove(foods,choice(foods));
+    console.log(`I'd like one ${chosenFood}. please`)
+    console.log(`Here You go ${chosenFood}.`)
+    console.log(`Fruits left: ${foods.length}.`)
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+        <h1>hello</h1>
+      {/* <Alert variant="success">
+        <h1>Welcome Back!</h1>
+        <Greeting />
+      </Alert>
+      <Alert variant="danger">
+        <h1>OH NO!</h1>
+      </Alert>
+      <img src={fakeLogo} id="logo" alt="logo" />
+      <ShoppingCart items={items} username="Carly" />
+      <ShoppingCart items={moreItems} username="Rusty" /> */}
     </div>
   );
 }
